@@ -1,0 +1,5 @@
+//This is the order that bulma imports variables so I'm importing them in the same order.
+//See here https://github.com/jgthms/bulma/blob/master/bulma.sass
+@import './initial.scss';
+@import './derived.scss';
+@import './generic.scss';

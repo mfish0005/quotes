@@ -1,0 +1,39 @@
+.horizontal-spacer {
+    padding: 0 0.75rem;
+}
+
+.has-display-flex {
+    display: flex;
+}
+
+.is-100vh {
+    min-height: 100vh;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.has-bg-primary {
+    background-color: $primary-bg-color !important;
+}
+
+.has-bg-secondary {
+    background-color: $secondary-bg-color !important;
+}
+
+.has-bg-khaki {
+    background-color: $khaki !important;
+}
+
+.has-bg-success {
+    background-color: $success !important;
+}
+
+.has-bg-danger {
+    background-color: $danger !important;
+}
+
+.has-bg-warning {
+    background-color: $warning !important;
+}

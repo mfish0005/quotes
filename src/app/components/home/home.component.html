@@ -1,0 +1,17 @@
+<section class="hero is-info is-fullheight">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-12">
+          <h2 class="title is-size-2">{{ quote.en }}</h2>
+          <h3 class="subtitle is-size-3">- {{ quote.author }}</h3>
+        </div>
+      </div>
+
+      <div class="star-block">
+        <p class="is-size-4">Rate this quote</p>
+        <p-rating [cancel]="false" (onRate)="handleRate($event)"></p-rating>
+      </div>
+    </div>
+  </div>
+</section>

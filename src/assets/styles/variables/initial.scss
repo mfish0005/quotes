@@ -1,0 +1,49 @@
+// Bulma Grey Shades
+$black:        hsl(0, 0%, 4%); //0A0A0A
+$black-bis:    hsl(0, 0%, 7%); //121212
+$black-ter:    hsl(0, 0%, 14%); //242424
+
+// $grey-darker:  hsl(0, 0%, 21%); //363636
+$grey-darker: #172121; //dark jungle green
+$grey-dark:    hsl(0, 0%, 29%); //4A4A4A
+$grey:         hsl(0, 0%, 48%); //7A7A7A
+$grey-light:   hsl(0, 0%, 71%); //B5B5B5
+$grey-lighter: hsl(0, 0%, 86%); //DBDBDB
+$grey-lightest: hsl(0, 0%, 93%); //EDEDED
+
+$white-ter:    hsl(0, 0%, 96%); //F5F5F5
+$white-bis:    hsl(0, 0%, 98%); //FAFAFA
+$white:        hsl(0, 0%, 100%); //FFFFFF
+
+// Colors
+$blue: #4392F1;
+$green: #4A9B1B;
+$azure: #35A7FF;
+$red: #F85A3E;
+$yellow: #E5E059;
+$purple: #2B193D;
+
+// Color Palette Colors // https://coolors.co/172121-8cae68-dcedf4-4a9b1b-ffffff
+// Unused alternate palette // https://coolors.co/172121-8cae68-dcedf4-679436-ffffff
+$kelly-green: #85CB33; // Primary
+$khaki: #B8B08D; // Secondary
+$azureish-white: #D7ECF4; // Primary background
+$dark-jungle-green: #172121; // Secondary background & text
+
+// Typography
+$family-sans-serif: "Poppins", sans-serif;
+
+$size-1: 4rem;    // 64px
+$size-2: 2.25rem;  // 36 px
+$size-3: 1.5rem;    // 24px
+$size-4: 1rem;  // 16px
+$size-5: 0.875rem; // 14px
+// Probably don't need these two sizes unless we change up the sizes & styles
+// $size-6: 1rem;    // 16px
+// $size-7: 0.75rem; // 12px
+
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;

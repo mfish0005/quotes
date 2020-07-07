@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bulma/sass/utilities/functions.sass";
+
+@import './assets/styles/index.scss';
+
+
+// Third party
+@import 'bulma-helpers/css/bulma-helpers.min.css';
+
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/nova-light/theme.css';
+@import '~primeng/resources/primeng.min.css';
+
+// Import Bulma's styles last
+@import "~bulma";
