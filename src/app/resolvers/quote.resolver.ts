@@ -21,6 +21,7 @@ export class QuoteResolver implements Resolve<Quote> {
       this.quote.en = res.en;
       this.quote.author = res.author;
 
+      // Now it will be accessible through the route
       return this.quote;
     }));
   }

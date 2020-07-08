@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Quote } from '../models/quote.model';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map, first } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -43,18 +43,22 @@ export class QuotesApiService {
     const url = `${this.baseUrl}/quotes`;
 
     const splitQuote = quote.en.split(' ');
-    const firstThree = splitQuote[0] + ' ' + splitQuote[1];
+    const firstTwoWords = splitQuote[0] + ' ' + splitQuote[1];
+    const lastTwoWords = splitQuote[splitQuote.length - 2] + ' ' + splitQuote[splitQuote.length - 1];
 
     return this._http.get<Quote[]>(url)
     .pipe(map(res => {
-      // TODO: For loops are so 2013.  Use ES6 instead
+      // TODO: For loops are so 2013.  Also maybe it should only match verbs/adjectives or maybe just random words
       for(let i = 0; i <= res.length; i++) {
-        // TODO: Add other ways of finding similar quotes E.G. same author or only match verbs/adjectives
-        // If this is a new quote that matches the first three words of the last quote
-        if (res[i] && res[i].en !== quote.en && res[i].en.includes(firstThree)) {
-          if (this.previouslyUsedQuotes.find(el => el.id === res[i].id) === undefined) {
+        if (
+          // If we have a different quote
+          res[i] && res[i].en !== quote.en
+          // AND it matches the first two OR last two
+          && (res[i].en.includes(firstTwoWords) || res[i].en.includes(lastTwoWords))
+          // AND it hasn't already been used
+          && this.previouslyUsedQuotes.find(prevQ => prevQ.id === res[i].id) === undefined) {
+            // It's somewhat similar so return it ¯\_(ツ)_/¯
             return res[i];
-          }
         }
       }
 

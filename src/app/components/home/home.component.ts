@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     constructor(private quotesApiService: QuotesApiService, private helperService: HelperService, private route: ActivatedRoute) { }
 
     ngOnInit() {
+      // The initial quote is stored in route data using a resolver
       this.quote = this.route.snapshot.data.quote;
     }
 
